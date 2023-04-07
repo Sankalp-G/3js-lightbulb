@@ -5,10 +5,9 @@ import Bulb from './Bulb'
 
 function Model() {
   return (
-    <Canvas gl={{ logarithmicDepthBuffer: true }} shadows camera={{ position: [-15, 0, 10], fov: 25 }}>
-      <fog attach="fog" args={['black', 15, 21.5]} />
+    <Canvas gl={{ logarithmicDepthBuffer: true }} shadows camera={{ position: [15, 0, 10], fov: 25 }}>
 
-      <Stage intensity={0.5} environment="city" shadows={{ type: 'accumulative', bias: -0.001 }} adjustCamera={false}>
+      <Stage intensity={0.5} environment="city" shadows={{ type: 'none' }} >
         <Bulb />
       </Stage>
 
