@@ -1,3 +1,15 @@
+# 3js-lightbulb
+
+A lightbulb demo project made using react three fiber and three.js
+
+## Features
+
+- Uses react three fiber for jsx abstractions instead of plain three.js
+- Various background options to view different lighting conditions
+- Used gltfjsx to transform gltf model down to only 58kb and generate jsx model components
+
+<hr>
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

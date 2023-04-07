@@ -26,7 +26,7 @@ const emissionMaterial = new THREE.MeshLambertMaterial({
 })
 
 export default function Model(props) {
-  const { nodes, materials } = useGLTF('/bulb-transformed.glb')
+  const { nodes, materials } = useGLTF('/3js-lightbulb/bulb-transformed.glb')
 
   return (
     <group {...props} dispose={null}>
@@ -44,4 +44,4 @@ export default function Model(props) {
   )
 }
 
-useGLTF.preload('/bulb-transformed.glb')
+useGLTF.preload('/3js-lightbulb/bulb-transformed.glb')
