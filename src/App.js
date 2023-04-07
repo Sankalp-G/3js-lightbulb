@@ -2,8 +2,10 @@ import { Canvas } from '@react-three/fiber'
 import { Stage, OrbitControls, Environment } from '@react-three/drei'
 import { EffectComposer, Bloom } from '@react-three/postprocessing'
 import Bulb from './Bulb'
+import { useState } from 'react';
+import { useRef } from 'react';
 
-function Model() {
+function Model({isBackground, backgroundBlur}) {
   return (
     <Canvas gl={{ logarithmicDepthBuffer: true }} shadows camera={{ position: [15, 0, 10], fov: 25 }}>
 
@@ -15,24 +17,31 @@ function Model() {
       <EffectComposer disableNormalPass>
         <Bloom luminanceThreshold={1} intensity={20} radius={1} mipmapBlur />
       </EffectComposer>
-      <Environment background preset="sunset" blur={0.8} />
+      <Environment background={isBackground} preset="sunset" blur={backgroundBlur} />
     </Canvas>
   );
 }
 
-function TogglesOverlay() {
+function TogglesOverlay(props) {
   return (
-    <div style={{ position: 'absolute', top: 0, left: 0, width: 'auto', height: 'auto' }}>
-
+    <div className={'toggles-overlay'}>
+      {props.children}
     </div>
   )
 }
 
 function App() {
+  const [isBackground, setIsBackground] = useState(true);
+  const [backgroundBlur, setBackgroundBlur] = useState(0.8);
+
   return (
     <>
-      <Model />
-      <TogglesOverlay />
+      <Model isBackground={isBackground} backgroundBlur={backgroundBlur} />
+
+      <TogglesOverlay>
+        <button onClick={ () => { setIsBackground(!isBackground) } }> Toggle Background </button>
+        <button onClick={ () => { setBackgroundBlur( backgroundBlur === 0 ? 0.8 : 0 ) }}> Toggle Background Blur </button>
+      </TogglesOverlay>
     </>
   )
 }
