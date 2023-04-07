@@ -10,21 +10,19 @@ import { useGLTF } from '@react-three/drei'
 const glassMaterial = new THREE.MeshPhysicalMaterial({
   roughness: 0.05,
   transmission: 0.9,
-  thickness: 0,
+  thickness: 1,
   metalness: 0.1,
   depthWrite: false
 });
 
 const wireMaterial = new THREE.MeshBasicMaterial({
-  color: '#111111',
-  toneMapped: false
+  color: '#111111'
 })
 
 const emissionMaterial = new THREE.MeshLambertMaterial({
   color: 'yellow',
   emissive: '#f9f06b',
   emissiveIntensity: 10,
-  toneMapped: false
 })
 
 export default function Model(props) {
