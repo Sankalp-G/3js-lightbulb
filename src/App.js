@@ -20,4 +20,21 @@ function Model() {
   );
 }
 
-export default Model;
+function TogglesOverlay() {
+  return (
+    <div style={{ position: 'absolute', top: 0, left: 0, width: 'auto', height: 'auto' }}>
+
+    </div>
+  )
+}
+
+function App() {
+  return (
+    <>
+      <Model />
+      <TogglesOverlay />
+    </>
+  )
+}
+
+export default App;
