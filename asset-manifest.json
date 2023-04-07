@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/3js-lightbulb/static/css/main.a38cb233.css",
-    "main.js": "/3js-lightbulb/static/js/main.b5686df2.js",
+    "main.js": "/3js-lightbulb/static/js/main.687fbec6.js",
     "index.html": "/3js-lightbulb/index.html",
     "main.a38cb233.css.map": "/3js-lightbulb/static/css/main.a38cb233.css.map",
-    "main.b5686df2.js.map": "/3js-lightbulb/static/js/main.b5686df2.js.map"
+    "main.687fbec6.js.map": "/3js-lightbulb/static/js/main.687fbec6.js.map"
   },
   "entrypoints": [
     "static/css/main.a38cb233.css",
-    "static/js/main.b5686df2.js"
+    "static/js/main.687fbec6.js"
   ]
 }
