@@ -10,7 +10,7 @@ import { useGLTF } from '@react-three/drei'
 const glassMaterial = new THREE.MeshPhysicalMaterial({
   roughness: 0.05,
   transmission: 0.9,
-  thickness: 1,
+  thickness: 1.5,
   metalness: 0.1,
   depthWrite: false
 });
